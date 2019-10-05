@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 // Got last known location. In some rare situations, this can be null.
                 if (location != null) {
                     messageView.setText(location.toString());
-                    messageView.setText("Altitude: " + location.getAltitude() + "\n");
+                    messageView.setText("Lattude: " + location.getLatitude() + "\n");
                     messageView.append("Longitude: " + location.getLongitude() + "\n");
                     messageView.append("Altitude: " + location.getAltitude());
                 }
@@ -59,6 +59,5 @@ public class MainActivity extends AppCompatActivity {
                 messageView.setText("No location: " + e.getMessage());
             }
         });
-
     }
 }
