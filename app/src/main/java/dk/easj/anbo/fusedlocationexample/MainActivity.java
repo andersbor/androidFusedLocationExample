@@ -3,9 +3,9 @@ package dk.easj.anbo.fusedlocationexample;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.location.Location;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
                     messageView.setText("Lattude: " + location.getLatitude() + "\n");
                     messageView.append("Longitude: " + location.getLongitude() + "\n");
                     messageView.append("Altitude: " + location.getAltitude());
+                } else {
+                    messageView.setText("Location is null");
                 }
             }
         });
